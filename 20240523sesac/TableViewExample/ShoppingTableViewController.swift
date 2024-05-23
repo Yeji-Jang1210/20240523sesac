@@ -40,7 +40,7 @@ class ShoppingTableViewController: UITableViewController {
         addButton.setTitle("추가", for: .normal)
         addButton.titleLabel?.font = .systemFont(ofSize: 12)
         addButton.backgroundColor = .systemGray5
-        addButton.tintColor = .black
+        addButton.tintColor =  .label
         addButton.layer.cornerRadius = 8
         addButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 15)
         

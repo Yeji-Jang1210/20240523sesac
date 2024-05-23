@@ -30,10 +30,10 @@ class ShoppingTableViewCell: UITableViewCell {
         cellBackgroundView.layer.cornerRadius = 12
         
         checkButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
-        checkButton.tintColor = .black
+        checkButton.tintColor = .label
         
         likeButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
-        likeButton.tintColor = .black
+        likeButton.tintColor = .label
         
         titleLabel.font = .systemFont(ofSize: 12)
     }
