@@ -53,7 +53,7 @@ class ShoppingTableViewController: UITableViewController {
         guard let text = headerTextField.text else { return }
         
         if !text.isEmpty {
-            currentList.append(ShoppingList(title: text))
+            currentList.insert(ShoppingList(title: text), at: 0)
             
             if let data = try? PropertyListEncoder().encode(currentList){
                 UserDefaults.standard.set(data, forKey: "shoppingList")
@@ -63,11 +63,29 @@ class ShoppingTableViewController: UITableViewController {
                 tableView.reloadData()
             }
         }
+    }
+    
+    private func loadAndSetUI(index: Int, buttonType: ShoppingListButtonType){
+        var currentList = list
         
+        switch buttonType {
+        case .check:
+            currentList[index].isChecked.toggle()
+        case .like:
+            currentList[index].isLiked.toggle()
+        }
+        
+        guard let data = try? PropertyListEncoder().encode(currentList) else {
+            return
+        }
+        UserDefaults.standard.set(data,forKey: "shoppingList")
+        fetchData()
+        tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
     }
     
 }
 
+//tableView
 extension ShoppingTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
@@ -92,38 +110,20 @@ extension ShoppingTableViewController {
     }
 }
 
-enum ShoppingListButtons {
-    case check(index: Int)
-    case like(index: Int)
-}
-
+//cell button actions
 extension ShoppingTableViewController {
     @objc func checkButtonTapped(_ sender: UIButton){
-        saveDataButtonTapped(buttonType: .check(index: sender.tag))
+        loadAndSetUI(index: sender.tag, buttonType: .check)
     }
     
     @objc func likeButtonTapped(_ sender: UIButton){
-        saveDataButtonTapped(buttonType: .like(index: sender.tag))
+        loadAndSetUI(index: sender.tag, buttonType: .like)
     }
-    
-    func saveDataButtonTapped(buttonType: ShoppingListButtons){
-        
-        var currentList = list
+}
 
-        switch buttonType {
-        case .check(let index):
-            currentList[index].isChecked.toggle()
-        case .like(let index):
-            currentList[index].isLiked.toggle()
-        }
-        
-        if let data = try? PropertyListEncoder().encode(currentList){
-            UserDefaults.standard.set(data, forKey: "shoppingList")
-            
-            fetchData()
-            tableView.reloadData()
-        }
-    }
+enum ShoppingListButtonType{
+    case check
+    case like
 }
 
 struct ShoppingList: Codable {
