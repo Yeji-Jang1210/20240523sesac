@@ -14,6 +14,9 @@
 		B81FFCEE2BFED99E00146002 /* dislikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FFCED2BFED99E00146002 /* dislikeViewController.swift */; };
 		B81FFCF02BFEEB0600146002 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FFCEF2BFEEB0600146002 /* ShowViewController.swift */; };
 		B81FFCF22BFEEB0C00146002 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FFCF12BFEEB0C00146002 /* ModalViewController.swift */; };
+		B86D69142C002DD900D38623 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D69132C002DD900D38623 /* TodoTableViewController.swift */; };
+		B86D69162C005D6300D38623 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D69152C005D6300D38623 /* SearchTableViewController.swift */; };
+		B86D69182C005DAC00D38623 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D69172C005DAC00D38623 /* SearchTableViewCell.swift */; };
 		B8EAACA72BFEC76E00C855AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EAACA62BFEC76E00C855AC /* AppDelegate.swift */; };
 		B8EAACA92BFEC76E00C855AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EAACA82BFEC76E00C855AC /* SceneDelegate.swift */; };
 		B8EAACAB2BFEC76E00C855AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EAACAA2BFEC76E00C855AC /* ViewController.swift */; };
@@ -33,6 +36,9 @@
 		B81FFCED2BFED99E00146002 /* dislikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dislikeViewController.swift; sourceTree = "<group>"; };
 		B81FFCEF2BFEEB0600146002 /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		B81FFCF12BFEEB0C00146002 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		B86D69132C002DD900D38623 /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		B86D69152C005D6300D38623 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		B86D69172C005DAC00D38623 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B8EAACA32BFEC76E00C855AC /* 20240523sesac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 20240523sesac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EAACA62BFEC76E00C855AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8EAACA82BFEC76E00C855AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 				B8EAACAC2BFEC76E00C855AC /* Main.storyboard */,
 				B81E05D72BFF060600142728 /* Todo.storyboard */,
 				B81E05D92BFF06C600142728 /* Search.storyboard */,
+				B86D69152C005D6300D38623 /* SearchTableViewController.swift */,
+				B86D69172C005DAC00D38623 /* SearchTableViewCell.swift */,
+				B86D69132C002DD900D38623 /* TodoTableViewController.swift */,
 				B81E05DB2BFF162900142728 /* SimpleTableViewController.swift */,
 				B81FFCEF2BFEEB0600146002 /* ShowViewController.swift */,
 				B81FFCF12BFEEB0C00146002 /* ModalViewController.swift */,
@@ -186,7 +195,10 @@
 				B81FFCEE2BFED99E00146002 /* dislikeViewController.swift in Sources */,
 				B8F3BC932BFF333800E8799A /* ShoppingTableViewCell.swift in Sources */,
 				B81E05DC2BFF162900142728 /* SimpleTableViewController.swift in Sources */,
+				B86D69162C005D6300D38623 /* SearchTableViewController.swift in Sources */,
+				B86D69182C005DAC00D38623 /* SearchTableViewCell.swift in Sources */,
 				B81FFCF22BFEEB0C00146002 /* ModalViewController.swift in Sources */,
+				B86D69142C002DD900D38623 /* TodoTableViewController.swift in Sources */,
 				B8F3BC912BFF2F1F00E8799A /* ShoppingTableViewController.swift in Sources */,
 				B8EAACA92BFEC76E00C855AC /* SceneDelegate.swift in Sources */,
 			);
